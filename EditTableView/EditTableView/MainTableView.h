@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface MainTableView : UITableViewController
+@class DetailController;
+
+@interface MainTableView : UITableViewController<UITableViewDataSource, UITableViewDelegate,NSFetchedResultsControllerDelegate>
+
+
+@property (strong, nonatomic) DetailController *detailController;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

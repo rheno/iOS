@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D852A6261750800600960092 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D852A6241750800600960092 /* DetailController.m */; };
+		D852A6271750800600960092 /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D852A6251750800600960092 /* DetailController.xib */; };
+		D8766C1517488F190041E18A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8766C1317488EAD0041E18A /* CoreData.framework */; };
+		D8766C1917488F9A0041E18A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8766C1717488F9A0041E18A /* Model.xcdatamodeld */; };
+		D8766C1C1748C6EA0041E18A /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = D8766C1B1748C6EA0041E18A /* Users.m */; };
 		D8E5141C1712BC5900F2B9ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E5141B1712BC5900F2B9ED /* UIKit.framework */; };
 		D8E5141E1712BC5900F2B9ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E5141D1712BC5900F2B9ED /* Foundation.framework */; };
 		D8E514201712BC5900F2B9ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E5141F1712BC5900F2B9ED /* CoreGraphics.framework */; };
@@ -21,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D852A6231750800600960092 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
+		D852A6241750800600960092 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
+		D852A6251750800600960092 /* DetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailController.xib; sourceTree = "<group>"; };
+		D8766C1317488EAD0041E18A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D8766C1817488F9A0041E18A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D8766C1A1748C6EA0041E18A /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		D8766C1B1748C6EA0041E18A /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		D8E514181712BC5900F2B9ED /* EditTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EditTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E5141B1712BC5900F2B9ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D8E5141D1712BC5900F2B9ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8766C1517488F190041E18A /* CoreData.framework in Frameworks */,
 				D8E5141C1712BC5900F2B9ED /* UIKit.framework in Frameworks */,
 				D8E5141E1712BC5900F2B9ED /* Foundation.framework in Frameworks */,
 				D8E514201712BC5900F2B9ED /* CoreGraphics.framework in Frameworks */,
@@ -53,9 +66,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8766C1617488F400041E18A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D8766C1717488F9A0041E18A /* Model.xcdatamodeld */,
+				D8766C1A1748C6EA0041E18A /* Users.h */,
+				D8766C1B1748C6EA0041E18A /* Users.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		D8E5140F1712BC5900F2B9ED = {
 			isa = PBXGroup;
 			children = (
+				D8766C1317488EAD0041E18A /* CoreData.framework */,
 				D8E514211712BC5900F2B9ED /* EditTableView */,
 				D8E5141A1712BC5900F2B9ED /* Frameworks */,
 				D8E514191712BC5900F2B9ED /* Products */,
@@ -83,10 +107,14 @@
 		D8E514211712BC5900F2B9ED /* EditTableView */ = {
 			isa = PBXGroup;
 			children = (
+				D8766C1617488F400041E18A /* CoreData */,
 				D8E5142A1712BC5900F2B9ED /* AppDelegate.h */,
 				D8E5142B1712BC5900F2B9ED /* AppDelegate.m */,
 				D8E5143E1712BCAD00F2B9ED /* MainTableView.h */,
 				D8E5143F1712BCAD00F2B9ED /* MainTableView.m */,
+				D852A6231750800600960092 /* DetailController.h */,
+				D852A6241750800600960092 /* DetailController.m */,
+				D852A6251750800600960092 /* DetailController.xib */,
 				D8E514401712BCAD00F2B9ED /* MainTableView.xib */,
 				D8E514221712BC5900F2B9ED /* Supporting Files */,
 			);
@@ -163,6 +191,7 @@
 				D8E514301712BC5900F2B9ED /* Default@2x.png in Resources */,
 				D8E514321712BC5900F2B9ED /* Default-568h@2x.png in Resources */,
 				D8E514421712BCAD00F2B9ED /* MainTableView.xib in Resources */,
+				D852A6271750800600960092 /* DetailController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +205,9 @@
 				D8E514281712BC5900F2B9ED /* main.m in Sources */,
 				D8E5142C1712BC5900F2B9ED /* AppDelegate.m in Sources */,
 				D8E514411712BCAD00F2B9ED /* MainTableView.m in Sources */,
+				D8766C1917488F9A0041E18A /* Model.xcdatamodeld in Sources */,
+				D8766C1C1748C6EA0041E18A /* Users.m in Sources */,
+				D852A6261750800600960092 /* DetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +285,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EditTableView/EditTableView-Prefix.pch";
 				INFOPLIST_FILE = "EditTableView/EditTableView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -264,6 +297,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EditTableView/EditTableView-Prefix.pch";
 				INFOPLIST_FILE = "EditTableView/EditTableView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,8 +322,22 @@
 				D8E5143D1712BC5900F2B9ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8766C1717488F9A0041E18A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8766C1817488F9A0041E18A /* Model.xcdatamodel */,
+			);
+			currentVersion = D8766C1817488F9A0041E18A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D8E514101712BC5900F2B9ED /* Project object */;
 }
