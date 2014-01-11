@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *updateBtn;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
 
+
+-(void)clearText;
 - (IBAction)findData:(id)sender;
 - (IBAction)saveData:(id)sender;
 - (IBAction)updateData:(id)sender;

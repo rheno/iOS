@@ -54,10 +54,7 @@
                               @"Insert Success" message:nil delegate:nil cancelButtonTitle:
                               @"OK" otherButtonTitles:nil];
         [alert show];
-        _studentNoText.text = @"";
-        _nameStudentText.text =@"";
-        _departmentText.text = @"";
-        _yearText.text =@"";
+        [self clearText];
     }
     else{
         alertString = @"Enter all fields";
@@ -67,6 +64,7 @@
                               alertString message:nil
                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [self clearText];
     }
 }
 
@@ -85,6 +83,7 @@
                               @"Update Success" message:nil delegate:nil cancelButtonTitle:
                               @"OK" otherButtonTitles:nil];
         [alert show];
+        [self clearText];
     }
     else{
         alertString = @"Enter all fields";
@@ -95,8 +94,9 @@
                               alertString message:nil
                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [self clearText];
     }
-
+    
     
 }
 
@@ -113,10 +113,7 @@
                               @"Delete Success" message:nil delegate:nil cancelButtonTitle:
                               @"OK" otherButtonTitles:nil];
         [alert show];
-        _studentNoText.text = @"";
-        _nameStudentText.text =@"";
-        _departmentText.text = @"";
-        _yearText.text =@"";
+        [self clearText];
     }
     else{
         alertString = @"Enter all fields";
@@ -127,9 +124,10 @@
                               alertString message:nil
                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [self clearText];
     }
     
-
+    
 }
 - (IBAction)findData:(id)sender {
     NSArray *data = [[DBManager getSharedInstance]findByRegisterNumber:
@@ -139,10 +137,8 @@
                               @"Data not found" message:nil delegate:nil cancelButtonTitle:
                               @"OK" otherButtonTitles:nil];
         [alert show];
-        _studentNoText.text = @"";
-        _nameStudentText.text =@"";
-        _departmentText.text = @"";
-        _yearText.text =@"";
+        
+        [self clearText];
     }
     else{
         _studentNoText.text = _findText.text;
@@ -150,6 +146,13 @@
         _departmentText.text = [data objectAtIndex:1];
         _yearText.text =[data objectAtIndex:2];
     }
+}
+
+-(void)clearText{
+    _studentNoText.text = @"";
+    _nameStudentText.text =@"";
+    _departmentText.text = @"";
+    _yearText.text =@"";
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
