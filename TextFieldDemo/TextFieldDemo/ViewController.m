@@ -45,6 +45,8 @@
     
     // set position for textField relative to keyboard size
     self.view.frame = CGRectMake(0,keyboardSize.height-_textField.frame.origin.y+30,self.view.frame.size.width, self.view.frame.size.height);
+    
+    self.view.frame = CGRectMake(0,keyboardSize.height-_textField2.frame.origin.y+30,self.view.frame.size.width, self.view.frame.size.height);
 }
 
 
@@ -53,6 +55,7 @@
     // set textField position to origin
     self.view.frame = CGRectMake(0,0,self.view.frame.size.width, self.view.frame.size.height);
     [_textField resignFirstResponder];
+    [_textField2 resignFirstResponder];
 }
 
 
